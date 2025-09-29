@@ -86,6 +86,6 @@ export class RecipeService {
     };
     this.http.put(this.recipesUrl +"/"+ id, updatedRecipe).subscribe(response => {
       console.log('Post updated:', response);
-    });;
+    });
   }
 }
