@@ -1,0 +1,22 @@
+<form [formGroup]="newRecipeForm" (ngSubmit)="onSubmitNewRecipe()" class="new-recipe-form">
+  <div>
+    <label for="title">Title: </label>
+    <input id="title" type="text" formControlName="title"/>
+  </div>
+  <div>
+    <label for="ingredient">Ingredients: </label>
+    <input id="ingredient" type="text" formControlName="ingredient"/>
+  </div>
+  <div>
+    <label for="ingredientAmount">Amount: </label>
+    <input id="ingredientAmount" type="text" formControlName="ingredientAmount"/>
+  </div>
+  <div>
+    <label for="preparation">Preparation: </label>
+    <input id="preparation" type="text" formControlName="preparation"/>
+  </div>
+  <div class="action-buttons">
+    <button class="action-button" type="submit">Add</button>
+    <button class="action-button" type="button" (click)="onCancel()">Cancel</button>
+  </div>
+</form>

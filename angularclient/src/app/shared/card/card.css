@@ -1,0 +1,11 @@
+.card {
+  color: #111827;
+  background-color: var(--accent);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 18px;
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  box-shadow: #111827 2px 2px 2px;
+}

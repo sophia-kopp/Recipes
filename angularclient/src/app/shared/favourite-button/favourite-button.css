@@ -1,0 +1,13 @@
+
+:hover {
+  transform: scale(1.1);
+}
+.active{
+  background-color: #ec4899;
+}
+.inactive{
+  background-color: black;
+}
+button {
+  align-items: center;
+}

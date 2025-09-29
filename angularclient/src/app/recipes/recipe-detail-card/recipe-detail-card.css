@@ -1,0 +1,35 @@
+
+.card-action-buttons {
+  display: grid;
+  width: 100%;
+  text-align: center;
+}
+
+button{
+  margin: 5px 0px;
+}
+
+.vl {
+  border-radius: 18px;
+  background: linear-gradient( red 0%, deeppink 50%, purple 100%);
+  padding-right: 2px;
+  height: 100%;
+  margin-inline: 0.5rem;
+}
+
+.aside {
+  display: flex;
+  width: 30%;
+}
+
+.comment-card {
+  background-color: white;
+  box-shadow: #111827 1px 1px 1px;
+  color: #111827;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 18px;
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+}

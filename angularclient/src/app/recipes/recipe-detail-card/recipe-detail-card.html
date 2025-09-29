@@ -1,0 +1,42 @@
+<app-card>
+  <div class="details-card">
+    <h3>{{recipe()?.title}}</h3>
+    <p>Favourite? {{recipe()?.favourite}}</p>
+    @if (detailView()){
+      <h4>Ingredients: </h4>
+      <ul>
+        @for (ingredient of recipe()?.ingredients; track ingredient){
+          <li>{{ingredient}}</li>
+        }
+      </ul>
+      <h4>Preparation:</h4>
+      <p>{{recipe()?.preparation}}</p>
+      <h4>Comments:</h4>
+      @for (comment of recipe()?.comments; track comment){
+        <div class="comment-card">
+          {{ comment }}
+        </div>
+      }
+    }
+  </div>
+  <div class="aside">
+    <div class="vl"></div>
+    <div class="card-action-buttons">
+      <app-favourite-button [recipeId]="recipe()?.id ?? ''" [recipe]="recipe()"/>
+
+      @if (!detailView()){
+        <button matFab extended (click)="goToDetailPage(recipe()?.id)">See All Details</button>
+      }
+      @if (detailView()){
+        <button matFab extended (click)="addComment(recipe()?.id)">Add Comment</button>
+        <button matFab extended (click)="goToEditRecipe(recipe()?.id)">Edit Recipe</button>
+        <button matFab extended (click)="deleteRecipe(recipe()?.id)">
+          <mat-icon>delete</mat-icon>
+          Delete Recipe
+        </button>
+      }
+
+    </div>
+  </div>
+</app-card>
+

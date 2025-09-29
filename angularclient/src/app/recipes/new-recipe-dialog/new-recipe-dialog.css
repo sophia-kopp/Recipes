@@ -1,0 +1,8 @@
+.new-recipe-form {
+  display: block;
+  margin: 10px;
+  background-color: cornflowerblue;
+}
+.action-button{
+  margin: 0 10px;
+}
